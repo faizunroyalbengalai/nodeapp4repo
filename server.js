@@ -29,7 +29,7 @@ app.get('/api/info', (_req, res) => {
   });
 });
 
-app.get('*', (_req, res) => {
+app.get('/(.*)', (_req, res) => {
   const indexPath = path.join(__dirname, 'public', 'index.html');
   if (fs.existsSync(indexPath)) {
     return res.sendFile(indexPath);
