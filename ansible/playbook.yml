@@ -262,7 +262,7 @@
       wait_for:
         host: 127.0.0.1
         port: "{{ app_port }}"
-        delay: 10
+        delay: 15
         timeout: 120
         state: started
       ignore_errors: yes
